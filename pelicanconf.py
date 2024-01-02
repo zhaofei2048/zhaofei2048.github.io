@@ -56,7 +56,11 @@ EXTRA_PATH_METADATA = {
 # Themes
 GITHUB_URL = "https://github.com/zhaofei2048"
 SITESUBTITLE = "The more I share, the more I learn"
-MENUITEMS = [("Home", "https://feigeek.com"),]
+MENUITEMS = [
+        ("Home", "https://feigeek.com"),
+        ("Categories", "https://feigeek.com/categories.html"),
+        ("All", "https://feigeek.com/archives.html")
+        ]
 
 # Simulatine, 11 May 2020 - Added guess_lang: False to stop Markdown trying
 # to incorrectly guess the language in code blocks. (https://github.com/simulatine)
