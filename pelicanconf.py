@@ -44,6 +44,7 @@ DISPLAY_CATEGORIES_ON_MENU = False
 OUTPUT_PATH = 'docs/'
 STATIC_PATHS = [
     "images",
+    "static/favicon.png",
     "static/CNAME",
     "pdfs"
 ]
