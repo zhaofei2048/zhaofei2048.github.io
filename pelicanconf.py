@@ -6,7 +6,7 @@ PATH = "content"
 
 TIMEZONE = 'Asia/Shanghai'
 
-DEFAULT_LANG = 'Chinese (Simplified)'
+DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -26,7 +26,6 @@ LINKS = (
 # Social widget
 SOCIAL = (
     ("GitHub", "https://github.com/zhaofei2048"),
-    ("Another social link", "#"),
 )
 
 DEFAULT_PAGINATION = 10
