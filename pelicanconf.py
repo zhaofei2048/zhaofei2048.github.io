@@ -25,7 +25,7 @@ LINKS = (
 
 # Social widget
 SOCIAL = (
-    ("You can add links in your config file", "#"),
+    ("GitHub", "https://github.com/zhaofei2048"),
     ("Another social link", "#"),
 )
 
@@ -33,3 +33,11 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
+
+
+# Basic settings
+USE_FOLDER_AS_CATEGORY = True
+DEFAULT_CATEGORY = 'misc'
+DELETE_OUTPUT_DIRECTORY = False
+ARTICLE_PATHS = ['posts']
+DISPLAY_CATEGORIES_ON_MENU = False
