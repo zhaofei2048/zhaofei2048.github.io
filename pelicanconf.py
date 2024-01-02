@@ -58,6 +58,9 @@ MENUITEMS = [
         ]
 LINKS_WIDGET_NAME = "Browse"
 SOCIAL_WIDGET_NAME = "Contact"
+THEME = "themes/myelegant"
+
+
 # Simulatine, 11 May 2020 - Added guess_lang: False to stop Markdown trying
 # to incorrectly guess the language in code blocks. (https://github.com/simulatine)
 MARKDOWN = {
