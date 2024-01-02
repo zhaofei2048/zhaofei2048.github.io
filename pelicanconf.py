@@ -44,11 +44,27 @@ DISPLAY_CATEGORIES_ON_MENU = False
 OUTPUT_PATH = 'docs/'
 STATIC_PATHS = [
     "images",
-    "static",
+    "extras",
     "pdfs"
 ]
 EXTRA_PATH_METADATA = {
-    "static/CNAME": {"path": "CNAME"},
-    "static/favicon.png": {"path": "favicon.png"},
-    "static/favicon.ico": {"path": "favicon.ico"},
+    "extras/CNAME": {"path": "CNAME"},
+    "extras/favicon.ico": {"path": "favicon.ico"},
+}
+
+
+# Themes
+GITHUB_URL = "https://github.com/zhaofei2048"
+SITESUBTITLE = "The more I share, the more I learn"
+
+
+# Simulatine, 11 May 2020 - Added guess_lang: False to stop Markdown trying
+# to incorrectly guess the language in code blocks. (https://github.com/simulatine)
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.codehilite': {'css_class': 'highlight', 'guess_lang':False,},
+        'markdown.extensions.extra': {},
+        'markdown.extensions.meta': {},
+    },
+    'output_format': 'html5',
 }
