@@ -42,3 +42,10 @@ DELETE_OUTPUT_DIRECTORY = False
 ARTICLE_PATHS = ['posts']
 DISPLAY_CATEGORIES_ON_MENU = False
 OUTPUT_PATH = 'docs/'
+STATIC_PATHS = [
+    "images",
+    "static",
+]
+EXTRA_PATH_METADATA = {
+    "static/CNAME": {"path": "CNAME"},
+}
