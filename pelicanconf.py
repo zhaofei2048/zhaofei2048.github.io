@@ -44,8 +44,10 @@ DISPLAY_CATEGORIES_ON_MENU = False
 OUTPUT_PATH = 'docs/'
 STATIC_PATHS = [
     "images",
-    "static",
+    "static/CNAME",
+    "pdfs"
 ]
 EXTRA_PATH_METADATA = {
     "static/CNAME": {"path": "CNAME"},
+    "static/favicon.png": {"path": "favicon.png"},
 }
