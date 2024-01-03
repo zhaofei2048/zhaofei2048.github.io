@@ -40,7 +40,7 @@ ARTICLE_PATHS = ['posts']
 DISPLAY_CATEGORIES_ON_MENU = True
 OUTPUT_PATH = 'docs/'
 STATIC_PATHS = [
-    "images",
+    "posts/images",
     "extras",
     "pdfs"
 ]
@@ -48,6 +48,9 @@ EXTRA_PATH_METADATA = {
     "extras/CNAME": {"path": "CNAME"},
     "extras/favicon.ico": {"path": "favicon.ico"},
 }
+
+# Order
+PAGE_ORDER_BY = 'date'
 
 
 # Themes
