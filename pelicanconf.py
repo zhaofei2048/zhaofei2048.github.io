@@ -58,7 +58,7 @@ MENUITEMS = [
         ]
 LINKS_WIDGET_NAME = "Browse"
 SOCIAL_WIDGET_NAME = "Contact"
-THEME = "themes/myelegant"
+# THEME = "themes/myelegant"
 
 
 # Simulatine, 11 May 2020 - Added guess_lang: False to stop Markdown trying
