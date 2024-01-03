@@ -40,7 +40,7 @@ ARTICLE_PATHS = ['posts']
 DISPLAY_CATEGORIES_ON_MENU = True
 OUTPUT_PATH = 'docs/'
 STATIC_PATHS = [
-    "posts/images",
+    "images",
     "extras",
     "pdfs"
 ]
