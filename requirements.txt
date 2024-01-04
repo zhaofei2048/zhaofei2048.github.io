@@ -1,3 +1,4 @@
-
+# pelican
+conda install -c conda-forge pelican
 # markdown
 conda install -c conda-forge markdown
