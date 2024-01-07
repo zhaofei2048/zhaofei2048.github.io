@@ -11,7 +11,9 @@ subprocess.run(". ~/anaconda3/etc/profile.d/conda.sh && conda activate <env_name
     shell=True, check=True)
 
 # Other shell command goes here, e.g.:
-subprocess.run("gdalwarp --help")
+subprocess.run("gdalwarp --help",
+    shell=True, check=True)
+
 ```
 
 # Exceptional Case
