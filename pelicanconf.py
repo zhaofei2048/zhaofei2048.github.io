@@ -49,6 +49,7 @@ EXTRA_PATH_METADATA = {
     "extras/CNAME": {"path": "CNAME"},
     "extras/favicon.ico": {"path": "favicon.ico"},
 }
+DEFAULT_DATE = 'fs'
 
 # Order
 PAGE_ORDER_BY = 'date'

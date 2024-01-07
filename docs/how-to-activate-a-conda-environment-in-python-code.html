@@ -4,8 +4,9 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content="Pelican" />
-        <title>FeiGeek - Fei Zhao</title>
+        <title>How to activate a conda environment in Python code?</title>
         <link rel="stylesheet" href="https://feigeek.com/theme/css/main.css" />
+        <meta name="description" content="Introduction & Method We can control the flow of execution of shell commands/scripts with Python. If we want to use gdalwarp, mrf2isis (USGS/ISIS..." />
 </head>
 
 <body id="index" class="home">
@@ -19,13 +20,18 @@
                     <li><a href="https://feigeek.com/pages/explore.html">Explore</a></li>
                     <li><a href="https://feigeek.com/pages/about.html">About</a></li>
                     <li><a href="https://feigeek.com/category/blog.html">blog</a></li>
-                    <li><a href="https://feigeek.com/category/codinghub.html">CodingHub</a></li>
+                    <li class="active"><a href="https://feigeek.com/category/codinghub.html">CodingHub</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="https://feigeek.com/how-to-activate-a-conda-environment-in-python-code.html" rel="bookmark"
+           title="Permalink to How to activate a conda environment in Python code?">How to activate a conda environment in Python code?</a></h1>
+    </header>
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="https://feigeek.com/how-to-activate-a-conda-environment-in-python-code.html">How to activate a conda environment in Python code?</a></h1>
+    <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2024-01-07T22:14:11.522903+08:00">
                 Published: 周日 07 一月 2024
@@ -40,7 +46,7 @@
         </address>
 <p>In <a href="https://feigeek.com/category/codinghub.html">CodingHub</a>.</p>
 <p>tags: <a href="https://feigeek.com/tag/python.html">python</a> <a href="https://feigeek.com/tag/conda.html">conda</a> <a href="https://feigeek.com/tag/shell.html">shell</a> </p>
-</footer><!-- /.post-info --><h1>Introduction &amp; Method</h1>
+</footer><!-- /.post-info -->      <h1>Introduction &amp; Method</h1>
 <p>We can control the flow of execution of shell commands/scripts with Python. If we want to use <code>gdalwarp</code>, <code>mrf2isis</code> (USGS/ISIS software), etc. in the shell script, the related conda environment should be activated first. The <code>subprocess</code> module of Python and the following codes can be used:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">subprocess</span>
 
@@ -67,92 +73,11 @@
 <div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">GEOTIFF_CSV</span><span class="k">:-</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
 <span class="w">    </span><span class="nb">export</span><span class="w"> </span><span class="nv">_CONDA_SET_GEOTIFF_CSV</span><span class="o">=</span><span class="nv">$GEOTIFF_CSV</span><span class="s2">&quot;</span>
 <span class="s2">fi</span>
-</code></pre></div>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+</code></pre></div>
+    </div><!-- /.entry-content -->
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="https://feigeek.com/ce-shi-wen-zhang-tu-pian-xian-shi.html" rel="bookmark"
-                           title="Permalink to 测试文章图片显示">测试文章图片显示</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2024-01-03T10:20:00+08:00">
-                Published: 周三 03 一月 2024
-        </abbr>
-		<br />
-        <abbr class="modified" title="2024-01-03T10:20:00+08:00">
-                Updated: 周三 03 一月 2024
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="https://feigeek.com/author/fei-zhao.html">Fei Zhao</a>
-        </address>
-<p>In <a href="https://feigeek.com/category/blog.html">blog</a>.</p>
-<p>tags: <a href="https://feigeek.com/tag/pelican.html">pelican</a> <a href="https://feigeek.com/tag/publishing.html">publishing</a> </p>
-</footer><!-- /.post-info -->                <p>Short version for index and feeds</p>
-                <a class="readmore" href="https://feigeek.com/ce-shi-wen-zhang-tu-pian-xian-shi.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="https://feigeek.com/my-super-post.html" rel="bookmark"
-                           title="Permalink to Pelican Blog article template">Pelican Blog article template</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2024-01-03T10:20:00+08:00">
-                Published: 周三 03 一月 2024
-        </abbr>
-		<br />
-        <abbr class="modified" title="2024-01-03T10:20:00+08:00">
-                Updated: 周三 03 一月 2024
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="https://feigeek.com/author/fei-zhao.html">Fei Zhao</a>
-        </address>
-<p>In <a href="https://feigeek.com/category/blog.html">blog</a>.</p>
-<p>tags: <a href="https://feigeek.com/tag/pelican.html">pelican</a> <a href="https://feigeek.com/tag/publishing.html">publishing</a> </p>
-</footer><!-- /.post-info -->                <p>Short version for index and feeds</p>
-                <a class="readmore" href="https://feigeek.com/my-super-post.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="https://feigeek.com/zhe-shi-pelicanwen-zhang-mo-ban.html" rel="bookmark"
-                           title="Permalink to 这是pelican文章模板">这是pelican文章模板</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2024-01-03T10:20:00+08:00">
-                Published: 周三 03 一月 2024
-        </abbr>
-		<br />
-        <abbr class="modified" title="2024-01-03T10:20:00+08:00">
-                Updated: 周三 03 一月 2024
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="https://feigeek.com/author/fei-zhao.html">Fei Zhao</a>
-        </address>
-<p>In <a href="https://feigeek.com/category/blog.html">blog</a>.</p>
-<p>tags: <a href="https://feigeek.com/tag/pelican.html">pelican</a> <a href="https://feigeek.com/tag/publishing.html">publishing</a> </p>
-</footer><!-- /.post-info -->                <p>Short version for index and feeds</p>
-                <a class="readmore" href="https://feigeek.com/zhe-shi-pelicanwen-zhang-mo-ban.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-                </ol><!-- /#posts-list -->
-                </section><!-- /#content -->
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>Browse</h2>
