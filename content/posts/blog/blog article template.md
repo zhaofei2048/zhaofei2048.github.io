@@ -1,7 +1,6 @@
 Title: Pelican Blog article template
 Date: 2024-01-03 10:20
 Modified: 2024-01-03 10:20
-Category: blog
 Tags: pelican, publishing
 Slug: my-super-post
 Author: Fei Zhao
