@@ -4,8 +4,9 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content="Pelican" />
-        <title>FeiGeek</title>
+        <title>Notes on Confusing Programming Practice</title>
         <link rel="stylesheet" href="https://feigeek.com/theme/css/main.css" />
+        <meta name="description" content="grep -E '.lbl$' input.txt > output.txt Though there were many lines like "xxx.lbl" in input.txt, but I got an empty file of output.txt. This was..." />
 </head>
 
 <body id="index" class="home">
@@ -19,24 +20,38 @@
                     <li><a href="https://feigeek.com/pages/explore.html">Explore</a></li>
                     <li><a href="https://feigeek.com/pages/about.html">About</a></li>
                     <li><a href="https://feigeek.com/category/blog.html">Blog</a></li>
-                    <li><a href="https://feigeek.com/category/codinghub.html">CodingHub</a></li>
+                    <li class="active"><a href="https://feigeek.com/category/codinghub.html">CodingHub</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 <section id="content" class="body">
-<h1>Archives for FeiGeek</h1>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="https://feigeek.com/notes-on-confusing-programming-practice.html" rel="bookmark"
+           title="Permalink to Notes on Confusing Programming Practice">Notes on Confusing Programming Practice</a></h1>
+    </header>
 
-<dl>
-    <dt>周五 12 一月 2024</dt>
-    <dd><a href="https://feigeek.com/notes-on-confusing-programming-practice.html">Notes on Confusing Programming Practice</a></dd>
-    <dt>周日 07 一月 2024</dt>
-    <dd><a href="https://feigeek.com/how-to-activate-a-conda-environment-in-python-code.html">How to activate a conda environment in Python code?</a></dd>
-    <dt>周三 03 一月 2024</dt>
-    <dd><a href="https://feigeek.com/ce-shi-wen-zhang-tu-pian-xian-shi.html">测试文章图片显示</a></dd>
-    <dt>周三 03 一月 2024</dt>
-    <dd><a href="https://feigeek.com/my-super-post.html">Pelican Blog article template</a></dd>
-    <dt>周三 03 一月 2024</dt>
-    <dd><a href="https://feigeek.com/zhe-shi-pelicanwen-zhang-mo-ban.html">这是pelican文章模板</a></dd>
-</dl>
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2024-01-12T13:31:09.062202+08:00">
+                Published: 周五 12 一月 2024
+        </abbr>
+		<br />
+        <abbr class="modified" title="2024-01-12T13:31:09.062202+08:00">
+                Updated: 周五 12 一月 2024
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://feigeek.com/author/fei-zhao.html">Fei Zhao</a>
+        </address>
+<p>In <a href="https://feigeek.com/category/codinghub.html">CodingHub</a>.</p>
+<p>tags: <a href="https://feigeek.com/tag/linux.html">linux</a> <a href="https://feigeek.com/tag/python.html">python</a> </p>
+</footer><!-- /.post-info -->      <h2>grep -E '.lbl$' input.txt &gt; output.txt</h2>
+<p>Though there were many lines like "xxx.lbl" in input.txt, but I got an empty file of output.txt. This was because that the input.txt was uploaded from windows. So, the line break in input.txt is 'windows' style (i.e., Carriage Return + Line Feed, or \r\n). I ran <code>cat -A input.xt</code>, and I found that it printed like "xxx.lbl^M$". This is the reason that '$' cannot match with '^M'.</p>
+<p><strong>Solve</strong>: Use <code>dos2unix input.txt</code> to translate the windows-style line-bread into unix-style ones. Then, run the grep command to continue.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
 </section>
         <section id="extras" class="body">
                 <div class="blogroll">

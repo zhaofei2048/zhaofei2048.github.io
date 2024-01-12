@@ -25,7 +25,37 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="https://feigeek.com/how-to-activate-a-conda-environment-in-python-code.html">How to activate a conda environment in Python code?</a></h1>
+                    <h1 class="entry-title"><a href="https://feigeek.com/notes-on-confusing-programming-practice.html">Notes on Confusing Programming Practice</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2024-01-12T13:31:09.062202+08:00">
+                Published: 周五 12 一月 2024
+        </abbr>
+		<br />
+        <abbr class="modified" title="2024-01-12T13:31:09.062202+08:00">
+                Updated: 周五 12 一月 2024
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://feigeek.com/author/fei-zhao.html">Fei Zhao</a>
+        </address>
+<p>In <a href="https://feigeek.com/category/codinghub.html">CodingHub</a>.</p>
+<p>tags: <a href="https://feigeek.com/tag/linux.html">linux</a> <a href="https://feigeek.com/tag/python.html">python</a> </p>
+</footer><!-- /.post-info --><h2>grep -E '.lbl$' input.txt &gt; output.txt</h2>
+<p>Though there were many lines like "xxx.lbl" in input.txt, but I got an empty file of output.txt. This was because that the input.txt was uploaded from windows. So, the line break in input.txt is 'windows' style (i.e., Carriage Return + Line Feed, or \r\n). I ran <code>cat -A input.xt</code>, and I found that it printed like "xxx.lbl^M$". This is the reason that '$' cannot match with '^M'.</p>
+<p><strong>Solve</strong>: Use <code>dos2unix input.txt</code> to translate the windows-style line-bread into unix-style ones. Then, run the grep command to continue.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://feigeek.com/how-to-activate-a-conda-environment-in-python-code.html" rel="bookmark"
+                           title="Permalink to How to activate a conda environment in Python code?">How to activate a conda environment in Python code?</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2024-01-07T22:27:18.504548+08:00">
                 Published: 周日 07 一月 2024
@@ -40,36 +70,13 @@
         </address>
 <p>In <a href="https://feigeek.com/category/codinghub.html">CodingHub</a>.</p>
 <p>tags: <a href="https://feigeek.com/tag/python.html">python</a> <a href="https://feigeek.com/tag/conda.html">conda</a> <a href="https://feigeek.com/tag/shell.html">shell</a> </p>
-</footer><!-- /.post-info --><h1>Introduction &amp; Method</h1>
-<p>We can control the flow of execution of shell commands/scripts with Python. If we want to use <code>gdalwarp</code>, <code>mrf2isis</code> (USGS/ISIS software), etc. in the shell script, the related conda environment should be activated first. The <code>subprocess</code> module of Python and the following codes can be used:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">subprocess</span>
-
-<span class="c1"># activate conda environment</span>
-<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;. ~/anaconda3/etc/profile.d/conda.sh &amp;&amp; conda activate &lt;env_name&gt;&quot;</span><span class="p">,</span>
-    <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1"># Other shell command goes here, e.g.:</span>
-<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;gdalwarp --help&quot;</span><span class="p">,</span>
-    <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</code></pre></div>
-
-<h1>Exceptional Case</h1>
-<p>The story here can be ended. However, some errors might occur:</p>
-<div class="highlight"><pre><span></span><code>/bin/sh:<span class="w"> </span><span class="m">6</span>:<span class="w"> </span>/home/zhaofei/anaconda3/envs/isis/etc/conda/activate.d/geotiff-activate.sh:<span class="w"> </span><span class="o">[[</span>:<span class="w"> </span>not<span class="w"> </span>found
-</code></pre></div>
-
-<p>This is because the version of Python in the conda base environment is <code>3.11</code>. The version of Python in the <env_name> is <code>3.9</code>. The <code>...activate.d/geotiff-activate.sh</code> is too old for <code>...profile.d/conda.sh</code> in the base. Therefore, I modified the problematical line:</p>
-<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$GEOTIFF_CSV</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-<span class="w">    </span><span class="nb">export</span><span class="w"> </span><span class="nv">_CONDA_SET_GEOTIFF_CSV</span><span class="o">=</span><span class="nv">$GEOTIFF_CSV</span><span class="s2">&quot;</span>
-<span class="s2">fi</span>
-</code></pre></div>
-
-<p>to:</p>
-<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">GEOTIFF_CSV</span><span class="k">:-</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-<span class="w">    </span><span class="nb">export</span><span class="w"> </span><span class="nv">_CONDA_SET_GEOTIFF_CSV</span><span class="o">=</span><span class="nv">$GEOTIFF_CSV</span><span class="s2">&quot;</span>
-<span class="s2">fi</span>
-</code></pre></div>                </article>
-            </aside><!-- /#featured -->
+</footer><!-- /.post-info -->                <h1>Introduction &amp; Method</h1>
+<p>We can control the flow of execution of shell commands/scripts with Python. If we want to use <code>gdalwarp</code>, <code>mrf2isis</code> (USGS/ISIS software), etc. in the shell script, the related conda environment should be activated first. The <code>subprocess</code> module of Python and the following codes can be used …</p>
+                <a class="readmore" href="https://feigeek.com/how-to-activate-a-conda-environment-in-python-code.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>Browse</h2>
