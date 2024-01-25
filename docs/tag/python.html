@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content="Pelican" />
-        <title>FeiGeek - python</title>
+        <title>FeiGeek - Python</title>
         <link rel="stylesheet" href="https://feigeek.com/theme/css/main.css" />
 </head>
 
@@ -20,12 +20,48 @@
                     <li><a href="https://feigeek.com/pages/about.html">About</a></li>
                     <li><a href="https://feigeek.com/category/blog.html">Blog</a></li>
                     <li><a href="https://feigeek.com/category/codinghub.html">CodingHub</a></li>
+                    <li><a href="https://feigeek.com/category/gis.html">GIS</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="https://feigeek.com/notes-on-confusing-programming-practice.html">Notes on Confusing Programming Practice</a></h1>
+                    <h1 class="entry-title"><a href="https://feigeek.com/tips-on-python-gis.html">Tips on Python GIS</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2024-01-25T14:53:34.564889+08:00">
+                Published: 周四 25 一月 2024
+        </abbr>
+		<br />
+        <abbr class="modified" title="2024-01-25T14:53:34.564889+08:00">
+                Updated: 周四 25 一月 2024
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://feigeek.com/author/fei-zhao.html">Fei Zhao</a>
+        </address>
+<p>In <a href="https://feigeek.com/category/gis.html">GIS</a>.</p>
+<p>tags: <a href="https://feigeek.com/tag/gis.html">GIS</a> <a href="https://feigeek.com/tag/python.html">Python</a> </p>
+</footer><!-- /.post-info --><h1>Nice Python packages for GIS:</h1>
+<ul>
+<li>Basics: <a href="https://pyproj4.github.io/pyproj/stable/">pyproj</a> (for projection); <a href="https://gdal.org/">gdal</a> (for raster data processing); <a href="https://fiona.readthedocs.io/en/stable/">fiona</a> (for vector data io)</li>
+<li>Geometry operation: <a href="https://shapely.readthedocs.io/en/stable/manual.html">shapely</a></li>
+<li>Vector data: <a href="https://geopandas.org/en/stable/getting_started/introduction.html">geopandas</a></li>
+<li>Raster data: <a href="https://rasterio.readthedocs.io/en/latest/intro.html">rasterio</a></li>
+<li>Raster and vector data analysis: <a href="https://pythonhosted.org/rasterstats/">rasterstats</a></li>
+</ul>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://feigeek.com/notes-on-confusing-programming-practice.html" rel="bookmark"
+                           title="Permalink to Notes on Confusing Programming Practice">Notes on Confusing Programming Practice</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2024-01-12T13:31:09.062202+08:00">
                 Published: 周五 12 一月 2024
@@ -40,14 +76,11 @@
         </address>
 <p>In <a href="https://feigeek.com/category/codinghub.html">CodingHub</a>.</p>
 <p>tags: <a href="https://feigeek.com/tag/linux.html">linux</a> <a href="https://feigeek.com/tag/python.html">python</a> </p>
-</footer><!-- /.post-info --><h2>grep -E '.lbl$' input.txt &gt; output.txt</h2>
-<p>Though there were many lines like "xxx.lbl" in input.txt, but I got an empty file of output.txt. This was because that the input.txt was uploaded from windows. So, the line break in input.txt is 'windows' style (i.e., Carriage Return + Line Feed, or \r\n). I ran <code>cat -A input.xt</code>, and I found that it printed like "xxx.lbl^M$". This is the reason that '$' cannot match with '^M'.</p>
-<p><strong>Solve</strong>: Use <code>dos2unix input.txt</code> to translate the windows-style line-bread into unix-style ones. Then, run the grep command to continue.</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+</footer><!-- /.post-info -->                <h2>grep -E '.lbl$' input.txt &gt; output.txt</h2>
+<p>Though there were many lines like "xxx.lbl" in input.txt, but I got an empty file of output.txt. This was because that the input.txt was uploaded from windows. So, the line break in input.txt is 'windows' style (i.e …</p>
+                <a class="readmore" href="https://feigeek.com/notes-on-confusing-programming-practice.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
